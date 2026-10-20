@@ -1,0 +1,18 @@
+ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address] [-c cipher_spec]
+[-D [bind_address:]port] [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+[-i identity_file] [-J destination] [-L address] [-l login_name] [-m mac_spec] [-O ctl_cmd]
+[-o option] [-P tag] [-p port] [-R address] [-S ctl_path] [-W host:port]
+[-w local_tun[:remote_tun]] destination [command [argument ...]]
+
+okay so simply -p for port 
+
+so for revision we'll use their ip instead of their org name
+ ping bandit.labs.overthewire.org
+
+Pinging bandit.labs.overthewire.org [13.51.99.177] with 32 bytes of data:
+Request timed out.
+
+ ssh -p 2220 bandit0@13.51.99.177
+The authenticity of host '[13.51.99.177]:2220 
+
+and we're in
