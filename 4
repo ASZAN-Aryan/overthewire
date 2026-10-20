@@ -1,0 +1,22 @@
+that was simple as -l in ls give metadata
+-a give all files and dir even hidden
+
+$ ls
+inhere
+bandit3@bandit:~$ cd inhere
+bandit3@bandit:~/inhere$ ls -la
+total 12
+drwxr-xr-x 2 root    root    4096 Sep 26 21:54 .
+drwxr-xr-x 3 root    root    4096 Sep 26 21:54 ..
+-rw-r----- 1 bandit4 bandit3   33 Sep 26 21:54 ...Hiding-From-You
+bandit3@bandit:~/inhere$ cd Hiding-From-You
+-bash: cd: Hiding-From-You: No such file or directory
+bandit3@bandit:~/inhere$ cat Hiding-From-You
+cat: Hiding-From-You: No such file or directory
+bandit3@bandit:~/inhere$ cat ".Hiding-From-You"
+cat: .Hiding-From-You: No such file or directory
+bandit3@bandit:~/inhere$ cat "..Hiding-From-You"
+cat: ..Hiding-From-You: No such file or directory
+bandit3@bandit:~/inhere$ cat "...Hiding-From-You"
+xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq
+bandit3@bandit:~/inhere$
