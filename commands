@@ -51,3 +51,12 @@ find . -type f -name "*.tmp" -print          Preview matching temporary files
 -user — filter by owner.
 -perm — filter by permissions.
 -exec — execute another command on matching entries.
+
+cat file.txt	Display file contents
+cat file1 file2	Display multiple files in order
+cat -n file.txt	Display contents with line numbers
+cat -A file.txt	Inspect tabs, line endings and other visible control characters
+cat file1 > file2	Copy contents into another file, overwriting it
+cat file1 >> file2	Append contents to another file
+cat > file.txt	Create a file and type content into it; press Ctrl+D to finish
+cat file1 file2 > combined.txt	Combine files into a new file
