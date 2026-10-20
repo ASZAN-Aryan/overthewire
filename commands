@@ -1,0 +1,53 @@
+Option   Meaning                              Example
+
+-p       Specify port                        ssh -p 2220 user@host
+-i       Specify private key                 ssh -i key.pem user@host
+-v       Verbose debugging                   ssh -v user@host
+-vvv     Maximum verbosity for debugging     ssh -vvv user@host
+-l       Specify username                    ssh -l bandit0 host
+-P       Not the SSH port option             Use lowercase -p
+-o       Set a configuration option          ssh -o ConnectTimeout=10 user@host
+-J       Connect through a jump host          ssh -J user@jump host
+-L       Local port forwarding               ssh -L 8080:localhost:80 user@host
+-R       Remote port forwarding              ssh -R 8080:localhost:80 user@host
+-N       Don't execute a remote command       ssh -N user@host
+-T       Disable pseudo-terminal allocation  ssh -T user@host
+-C       Enable compression                  ssh -C user@host
+-4       Force IPv4                          ssh -4 user@host
+-6       Force IPv6                          ssh -6 user@host
+
+find [starting_path] [conditions] [actions]
+
+Command                                      Purpose
+
+find . -name "file.txt"                      Find by name
+find . -iname "*.pdf"                        Find by name, ignoring case
+find . -type f                               Find files
+find . -type d                               Find directories
+find / -name "config" 2>/dev/null            Search system, hide errors
+find . -maxdepth 2 -type f                   Limit search depth
+find . -type f -size +100M                   Files larger than 100 MB
+find . -type f -size 50c                     Files exactly 50 bytes
+find . -type f -empty                        Empty files
+find . -type f -mtime -7                     Modified within 7 days
+find . -type f -mmin -60                     Modified within 60 minutes
+find . -type f -perm -4000                   Files with SUID bit set
+find . -type f -executable                   Executable files
+find . -type f -name "*.log" -size +10M      Large log files
+find . -type f \( -name "*.jpg" -o -name "*.png" \)   Find JPG or PNG files
+find . -type f ! -name "*.txt"               Files other than TXT
+find . -type f -exec file {} +               Identify file types
+find . -type f -exec ls -lh {} +             List file details
+find . -type f -exec sha256sum {} +          Calculate file hashes
+find . -type d -empty                        Empty directories
+find . -type f -name "*.tmp" -print          Preview matching temporary files
+
+- \; — terminates the -exec action.
+-name — match a filename; case-sensitive.
+-iname — match a filename without case sensitivity.
+-type f — regular file.
+-type d — directory.
+-size — filter by size.
+-user — filter by owner.
+-perm — filter by permissions.
+-exec — execute another command on matching entries.
