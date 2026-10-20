@@ -1,0 +1,57 @@
+bro kudos the tcm for that amazing linux tutorial...i really wanst expecting this to even work but it did
+:~$ ls
+bandit6@bandit:~$ ls -la
+total 20
+drwxr-xr-x   2 root root 4096 Sep 26 21:54 .
+drwxr-xr-x 150 root root 4096 Sep 26 21:58 ..
+-rw-r--r--   1 root root  220 Feb 13  2026 .bash_logout
+-rw-r--r--   1 root root 3851 Sep 26 21:38 .bashrc
+-rw-r--r--   1 root root  807 Feb 13  2026 .profile
+bandit6@bandit:~$ ls .profile
+.profile
+bandit6@bandit:~$ cd -- .profile
+-bash: cd: .profile: Not a directory
+bandit6@bandit:~$ cat .profile
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+bandit6@bandit:~$ python3 -m http.server:8080
+/usr/bin/python3: No module named http.server:8080
+bandit6@bandit:~$ python3 -m http.server 8080
+Serving HTTP on 0.0.0.0 port 8080 (http://0.0.0.0:8080/) ...
+pXa26xhMWaC2SvDotA4r9EgZkulOeSBW
+
+ookkh i believer this was a flase positive...a possword but not of this stage
+bandit6@bandit:/home$ cd ..
+bandit6@bandit:/$
+
+find / -type f -user bandit7 -group bandit6 -size 33c
+
+/var/lib/dpkg/info/bandit7.password
+
+bandit6@bandit:/$ cat /var/lib/dpkg/info/bandit7.password
+Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
