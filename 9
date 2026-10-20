@@ -1,0 +1,17 @@
+damm a difficult one...took me a while
+so seeming a played around too much but thanks to tcm i did it using bash and grep
+
+ while IFS= read -r ip; do
+    count=$(grep -cFx -- "$ip" data.txt)
+    if [ "$count" -eq 1 ]; then
+        echo "$ip"
+    fi
+done < data.txt
+EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
+easiest way is just sort nd uniq
+uniq only compares consecutive lines thus sort is necessary
+sort data.txt | uniq -u
+
+alse without sorting
+awk '{count[$0]++} END {for (line in count) if (count[line] == 1) print line}' data.txt
+EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
