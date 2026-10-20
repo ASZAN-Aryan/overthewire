@@ -1,0 +1,47 @@
+okh so this one took a while to figure out
+apparently to for not opertion just simply use  !
+find hs many options
+
+
+bandit5@bandit:~/inhere$ size maybehere17
+size: Warning: 'maybehere17' is a directory
+bandit5@bandit:~/inhere$ find -type f -executable -size 1033c
+bandit5@bandit:~/inhere$ find -type f ! -executable -size 1033c
+./maybehere07/.file2
+bandit5@bandit:~/inhere$ pwd
+/home/bandit5/inhere
+bandit5@bandit:~/inhere$ cat /home/bandit5/inhere/maybehere07/.file2
+pXa26xhMWaC2SvDotA4r9EgZkulOeSBW
+
+see also you can use du -ab . | sort -n
+this sorts by size
+-a = all directories nad subs and subs whatever
+-b = is for bytes
+
+802446  .
+bandit5@bandit:~/inhere$ du -ab . | sort -n
+51      ./maybehere15/spaces file2
+77      ./maybehere18/-file2
+99      ./maybehere10/.file2
+142     ./maybehere04/.file3
+154     ./maybehere18/.file3
+215     ./maybehere08/spaces file1
+251     ./maybehere12/-file2
+279     ./maybehere15/.file2
+288     ./maybehere01/-file2
+315     ./maybehere03/-file1
+376     ./maybehere14/spaces file3
+452     ./maybehere11/.file1
+494     ./maybehere19/.file3
+503     ./maybehere11/spaces file2
+551     ./maybehere00/.file1
+742     ./maybehere15/.file3
+747     ./maybehere08/.file2
+774     ./maybehere09/-file2
+871     ./maybehere14/spaces file2
+880     ./maybehere05/spaces file1
+895     ./maybehere17/.file1
+952     ./maybehere13/spaces file2
+1022    ./maybehere07/spaces file3
+1022    ./maybehere12/.file3
+1033    ./maybehere07/.file2
