@@ -60,3 +60,17 @@ cat file1 > file2	Copy contents into another file, overwriting it
 cat file1 >> file2	Append contents to another file
 cat > file.txt	Create a file and type content into it; press Ctrl+D to finish
 cat file1 file2 > combined.txt	Combine files into a new file
+
+sort file.txt	Sort alphabetically
+sort -n file.txt	Sort numerically
+sort -r file.txt	Reverse sort
+sort -u file.txt	Sort and remove duplicate lines
+sort -k2 file.txt	Sort by second field
+sort -o file.txt file.txt	Save sorted output back to the file
+
+uniq file.txt	Remove adjacent duplicates
+uniq -c file.txt	Count adjacent occurrences
+uniq -d file.txt	Show repeated lines only
+uniq -u file.txt	Show lines occurring once among adjacent groups
+uniq -i file.txt	Ignore case when comparing lines
+
