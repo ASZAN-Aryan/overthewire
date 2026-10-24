@@ -1,0 +1,21 @@
+bro it was soooo esy and yet I was just digging and digging...apparently my foolish ass eas encoding an already encoded file
+onlly had to do --decode
+
+bandit10@bandit:~$ base64 data.txt
+VkdobElIQmhjM04zYjNKa0lHbHpJSEJaWms5Wk5raDNWWE5FYWpWeVREbFZkbmxvVlRkTlEyMTJP
+SFpPTlZKdkNnPT0K
+bandit10@bandit:~$ base64 data.txt| sort
+SFpPTlZKdkNnPT0K
+VkdobElIQmhjM04zYjNKa0lHbHpJSEJaWms5Wk5raDNWWE5FYWpWeVREbFZkbmxvVlRkTlEyMTJP
+bandit10@bandit:~$ base64 data.txt| strings
+VkdobElIQmhjM04zYjNKa0lHbHpJSEJaWms5Wk5raDNWWE5FYWpWeVREbFZkbmxvVlRkTlEyMTJP
+SFpPTlZKdkNnPT0K
+bandit10@bandit:~$ strings data.txt
+VGhlIHBhc3N3b3JkIGlzIHBZZk9ZNkh3VXNEajVyTDlVdnloVTdNQ212OHZONVJvCg==
+bandit10@bandit:~$ echo data.txt
+data.txt
+bandit10@bandit:~$ base64 --decode data.txt
+The password is pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+bandit10@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
