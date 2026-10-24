@@ -1,0 +1,9 @@
+GROozWPO8QyN0mGrjUkID0WCYkZiQxrN simple enough if you know the parameters
+
+for python lovers
+python3 -c "import codecs; print(codecs.decode(open('data.txt').read(), 'rot_13'))"
+
+bandit11@bandit:~$ tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt
+The password is GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+bandit11@bandit:~$ Connection to bandit.labs.overthewire.org closed by remote host.
+Connection to bandit.labs.overthewire.org closed.
