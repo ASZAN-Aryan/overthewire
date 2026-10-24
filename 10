@@ -1,0 +1,21 @@
+B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+
+okh so this one wierded me out at first....seemed very simple...but then after trying pipelining was the solution or an extended grep command using 'a' for readable binary
+'E' for extended re's and  'sequecnce{mix,mx}' for searching extend sequence of a character in the string
+
+
+        =ulD
+`[VN7|
+bandit9@bandit:~$ grep -aE '={5,}' data.txt
+        ��mL\Ϸ���
+                 ��.N�|�/���� �X�K
+                                  m�^��#��p�P�>J�z�\========== the
+�E�{f����!�k�ʉ��cQoHde��,�i���K���ox8UD���R����䞬���+�]��b�o_ϋ7l��M��f������n�.Ձ�6�2����A�����}���U��==�I/tCd�
+                                                                                            �O����B========== password
+D       Z1)5A�<�d1��5����
+                         D�
+                           �.��L�A�     <WvJ��j�jE��à�v2��SN�� �>��Ԑi��5S@�����7��΢��`�ɤ��f��S�����t)�Z'!!J�c�Ռ�肸Ҋ����MV�vf,��4ԅ_봒� 6����6ͮ�N��H�a���,
+                               ;\���^����Yx�^�{��A�k�3 ��e�iې�5�_"ë�&FN�        ��\8Ln��6�908N�%�)��u
+                                                                                                     ��<u*========== is
+�g�H�0�========== B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+bandit9@bandit:~$
